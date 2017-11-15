@@ -4,10 +4,10 @@ import React from 'react';
 export class Header extends React.Component {
   render (){
     return (
-      <div id="Header_wrapper" className="bg-parallax" data-enllax-ratio="0.3">
+        <div id="Header_wrapper" className="bg-parallax" data-enllax-ratio="0.3">
           <header id="Header">
               <div className="header_placeholder"></div>
-              {/*Top menu bar*/ }
+
               <div id="Top_bar">
                   <div className="container">
                       <div className="column one">
@@ -15,14 +15,14 @@ export class Header extends React.Component {
                               <div className="logo">
                                   <a id="logo" href="index-musician.html" title="BeMusician - BeTheme">
 
-                                    <h3 style={{color:"white", marginTop: 10+"px"}}>Gorgias</h3>
+                                    <h3 style={{color:"white",marginTop: 10+"px"}}>Gorgias</h3>
                                   </a>
                               </div>
                               <div className="menu_wrapper">
                                   <nav id="menu" className="menu-main-menu-container">
                                       <ul id="menu-main-menu" className="menu tk">
                                           <li className="current_page_item">
-                                              <a href="index-NewGorgias.html"><span>New Gorgias</span></a>
+                                              <a href="index-GorgiasFull.html"><span>New Gorgias</span></a>
                                           </li>
                                           <li>
                                               <a href="Gorgias-Stories.html"><span>Stories</span></a>
@@ -52,7 +52,6 @@ export class Header extends React.Component {
                       </div>
                   </div>
               </div>
-              {/*Rev slider*/}
 
           </header>
         </div>

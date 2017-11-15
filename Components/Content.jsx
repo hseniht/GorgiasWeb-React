@@ -1,13 +1,16 @@
 import React from 'react';
 
 
-class Content extends React.Component {
+export class Content extends React.Component {
   render (){
     return (
-          <div id="Content" style="background-color:#292929;">
-            <div class="content_wrapper clearfix">
-                <div class="sections_group">
-                  <div class="entry-content">
+          <div id="Content" style={{backgroundColor:"#292929"}}>
+            <div className="content_wrapper clearfix">
+                <div className="sections_group">
+                  <div className="entry-content">
+
+
+                    
                   </div>
                 </div>
               </div>

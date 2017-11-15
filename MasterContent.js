@@ -1,5 +1,5 @@
 import React from 'react';
-import {Header} from './Components/Header.jsx'
+import {Header} from './Components/Header.js'
 import {Content} from './Components/Content.jsx'
 import {Footer} from './Components/Footer.jsx'
 
@@ -9,6 +9,7 @@ export class MasterContent extends React.Component {
 
         <div id="Wrapper">
             <Header/>
+            <Content/>
             <Footer/>
         </div>
       );
