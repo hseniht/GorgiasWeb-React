@@ -6,7 +6,7 @@ export class MasterContent extends React.Component {
       return (
 
         <div>
-          YeaARR!
+          Pure stock!
         </div>
       );
    }
