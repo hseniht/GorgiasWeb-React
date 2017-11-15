@@ -1,7 +1,7 @@
 import React from 'react';
 
 
-class Footer extends React.Component {
+export class Footer extends React.Component {
   render (){
     return (
             <footer id="Footer" className="clearfix bg-color-4">
@@ -28,8 +28,9 @@ class Footer extends React.Component {
                   <div className="column one-fourth">
                     <aside className="widget tkLinks">
                       <h4 className="tkFont1" style={{fontWeight:'bold'}}>Address</h4>
-                      <p>
-
+                      <p>No.8 Jalan Kerinchi, The Vertical,
+                        <br/> Bangsar South City, 59200
+                        <br/> Malaysia
                       </p>
                     </aside>
                   </div>
@@ -46,11 +47,11 @@ class Footer extends React.Component {
                               <i style={{marginright:10}} className="icon-email"></i><a href="#">noreply@envato.com</a>
                             </li>
                           </ul>
-                          <p className="tkFont1" style={{fontsize: '26px', lineheight: 35,}}>
-                            <a style={{color:'pink'}} href="#"><i className="icon-facebook-circled"></i></a>
-                            <a style={{color: 'pink',}} href="#"><i className="icon-twitter-circled"></i></a>
-                            <a style={{color: 'pink'}} href="#"><i className="icon-pinterest-circled"></i></a>
-                            <a style={{color: 'pink'}} href="#"><i className="icon-linkedin-circled"></i></a>
+                          <p className="tkFont1" style={{fontSize: 26 +"px", lineHeight: 35 +"px"}}>
+                            <a style={{color:'#4d5258'}} href="#"><i className="icon-facebook-circled"></i></a>
+                            <a style={{color: '#4d5258',}} href="#"><i className="icon-twitter-circled"></i></a>
+                            <a style={{color: '#4d5258'}} href="#"><i className="icon-pinterest-circled"></i></a>
+                            <a style={{color: '#4d5258'}} href="#"><i className="icon-linkedin-circled"></i></a>
                           </p>
                         </div>
                       </div>
@@ -73,5 +74,3 @@ class Footer extends React.Component {
     );
   }
 }
-
-export default Footer;
