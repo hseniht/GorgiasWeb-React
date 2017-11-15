@@ -6,7 +6,7 @@ export class MasterContent extends React.Component {
       return (
 
         <div>
-          Pure stock!
+          Now with css , plugins & js!
         </div>
       );
    }
