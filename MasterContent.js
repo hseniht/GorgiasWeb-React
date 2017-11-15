@@ -1,12 +1,12 @@
 import React from 'react';
-
+import Footer from './Components/Footer.js'
 
 export class MasterContent extends React.Component {
    render() {
       return (
 
-        <div>
-          Now with css , plugins & js!
+        <div id="Wrapper">
+            <Footer/>
         </div>
       );
    }
