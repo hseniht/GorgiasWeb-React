@@ -1,6 +1,8 @@
 import React from 'react';
 import {WhatIsGorgias} from '../Components/sections/1-WhatIsGorgias.jsx';
 import {TopStories} from '../Components/sections/1.2-TopStories.jsx';
+import {WhyBecomeGorgias} from '../Components/sections/3-WhyBecomeGorgias.jsx';
+import {AppDownload} from '../Components/sections/4-AppDownload.jsx';
 
 export class Content extends React.Component {
   render (){
@@ -12,6 +14,8 @@ export class Content extends React.Component {
 
                     <WhatIsGorgias/>
                     <TopStories/>
+                    <WhyBecomeGorgias/>
+                    <AppDownload/>
 
                   </div>
                 </div>
