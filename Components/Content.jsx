@@ -1,5 +1,6 @@
 import React from 'react';
-
+import {WhatIsGorgias} from '../Components/sections/1-WhatIsGorgias.jsx';
+import {TopStories} from '../Components/sections/1.2-TopStories.jsx';
 
 export class Content extends React.Component {
   render (){
@@ -9,8 +10,9 @@ export class Content extends React.Component {
                 <div className="sections_group">
                   <div className="entry-content">
 
+                    <WhatIsGorgias/>
+                    <TopStories/>
 
-                    
                   </div>
                 </div>
               </div>
