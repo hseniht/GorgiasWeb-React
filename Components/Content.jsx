@@ -11,6 +11,8 @@ import {ContactTextBanner} from './ContactSections/2-ContactTextBanner.jsx';
 import {Locations} from './ContactSections/3-Locations.jsx';
 import {ContactForm} from './ContactSections/4-ContactForm.jsx';
 
+import {PrivacyPolicy} from './TermsSections/1-PrivacyPolicy.jsx';
+
 
 export class Content extends React.Component {
   render (){
@@ -20,10 +22,8 @@ export class Content extends React.Component {
                 <div className="sections_group">
                   <div className="entry-content">
 
-                    <ContactWebCover/>
-                    <ContactTextBanner/>
-                    <Locations/>
-                    <ContactForm/>
+                    <PrivacyPolicy/>
+
                   </div>
                 </div>
               </div>
