@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import {App} from './App.jsx';
-import {MasterContent} from './MasterContent.js';
+import {MainPage} from './Components/MainPage.jsx';
 
-ReactDOM.render(<MasterContent />, document.getElementById('MasterContent'));
+ReactDOM.render(<MainPage />, document.getElementById('App'));

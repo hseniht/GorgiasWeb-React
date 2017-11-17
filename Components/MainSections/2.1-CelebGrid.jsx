@@ -4,7 +4,7 @@ import React from 'react';
 export class CelebGrid extends React.Component {
   render (){
     return (
-            <div class="section mcb-section tkSection-paddingBottom-only bg-color-1">
+            <div className="section mcb-section tkSection-paddingBottom-only bg-color-1">
                   <div className="section_wrapper clearfix">
                       <div className="items_group clearfix">
                           {/* One full width row*/}
