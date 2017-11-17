@@ -11,7 +11,6 @@ export class TextTilesPanels extends React.Component {
               {/*-----------or ----------
                 this.props.todos.map((todo,i) => {
                   return <div todo={todo} key = {i}>*/}
-
                   <div className="column mcb-column one-third column_column" style={{margin: 1+"% "+ 1+"%"}}>
                       <div className="column_attr align_center tkPanels">
                           <div className="image_frame image_item no_link scale-with-grid alignnone no_border">
