@@ -6,12 +6,21 @@ import {AppDownload} from './MainSections/4-AppDownload.jsx';
 import {WhoIsGorgias} from './MainSections/2-WhoIsGorgias.jsx';
 import {CelebGrid} from './MainSections/2.1-CelebGrid.jsx';
 
-import {ContactWebCover} from './ContactSections/1-ContactWebCover.jsx';
-import {ContactTextBanner} from './ContactSections/2-ContactTextBanner.jsx';
-import {Locations} from './ContactSections/3-Locations.jsx';
-import {ContactForm} from './ContactSections/4-ContactForm.jsx';
+import {ContactWebCover} from './ContactPageSections/1-ContactWebCover.jsx';
+import {ContactTextBanner} from './ContactPageSections/2-ContactTextBanner.jsx';
+import {Locations} from './ContactPageSections/3-Locations.jsx';
+import {ContactForm} from './ContactPageSections/4-ContactForm.jsx';
 
-import {PrivacyPolicy} from './TermsSections/1-PrivacyPolicy.jsx';
+import {PrivacyPolicy} from './TermsPageSections/1-PrivacyPolicy.jsx';
+
+import {AboutHeadingCover} from './AboutPageSection/1-AboutHeadingCover.jsx';
+import {AboutUs} from './AboutPageSection/2-AboutUs.jsx';
+import {OurStory} from './AboutPageSection/3-OurStory.jsx';
+import {MissionVision} from './AboutPageSection/4-MissionVision.jsx';
+import {ImageBanner} from './AboutPageSection/5-ImageBanner.jsx';
+import {TextTilesPanels} from './AboutPageSection/6-TextTilesPanels.jsx';
+import {Teams} from './AboutPageSection/7-Teams.jsx';
+import {AppDownloadBanner} from './AboutPageSection/8-AppDownloadBanner.jsx';
 
 
 export class Content extends React.Component {
@@ -22,7 +31,14 @@ export class Content extends React.Component {
                 <div className="sections_group">
                   <div className="entry-content">
 
-                    <PrivacyPolicy/>
+                    <AboutHeadingCover/>
+                    <AboutUs/>
+                    <OurStory/>
+                    <MissionVision/>
+                    <ImageBanner/>
+                    <TextTilesPanels/>
+                    <Teams/>
+                    <AppDownloadBanner/>
 
                   </div>
                 </div>
