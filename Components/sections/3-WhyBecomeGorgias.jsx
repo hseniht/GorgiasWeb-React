@@ -1,7 +1,53 @@
 import React from 'react';
-
+import {TextTilesPanels} from '../sectionTemplates/TextTilesPanels.jsx';
 
 export class WhyBecomeGorgias extends React.Component {
+
+  constructor(props) {
+    super(props);
+    this.state ={
+      text:'',
+      age:'',
+      todos: [
+                {
+                  id:1,
+                  name:'Discoverr Gorgias',
+                  description: "Nulla accumsan consequat magna, vel faucibus tellus vulputate ac. Aliquam consectetur feugiat diam, id porta putra madre"
+                },
+
+                {
+                  id:2,
+                  name:'Storyland',
+                  description: "Vivamus a nibh magna. Sed porttitor vehicula purus, at congue sem feugiat at. Pellentesque rutrum tempor tincidunt"
+                },
+
+                {
+                  id:3,
+                  name:'Touch For Love',
+                  description: "Nunc pharetra erat magna in tempor risus tincidunt tristique. Maecenas bibendum mauris eu eros convallis sagittis"
+                },
+
+                {
+                  id:4,
+                  name:'iFeel',
+                  description: "Justo in erat luctus euismod. Phasellus et orci ac risus mattis pretium at quis justo. Morbi molestie pulvinar."
+                },
+
+                {
+                  id:5,
+                  name:'Stay On',
+                  description: "Justo in erat luctus euismod. Phasellus et orci ac risus mattis pretium at quis justo. Morbi molestie pulvinar."
+                },
+
+                {
+                  id:6,
+                  name:'Hotspot',
+                  description: "Justo in erat luctus euismod. Phasellus et orci ac risus mattis pretium at quis justo. Morbi molestie pulvinar."
+                }
+            ]
+    }
+  }
+
   render (){
     return (
               <div className="section mcb-section tkSection-padding bg-color-2">
@@ -22,83 +68,7 @@ export class WhyBecomeGorgias extends React.Component {
                       <div className="wrap mcb-wrap one  valign-top clearfix" style={{margin: 50+"px auto"}}>
                           <div className="mcb-wrap-inner">
 
-                              <div className="column mcb-column one-third column_column" style={{margin: 1+"% "+ 1+"%"}}>
-                                  <div className="column_attr align_center tkPanels">
-                                      <div className="image_frame image_item no_link scale-with-grid alignnone no_border">
-                                          <div className="image_wrapper"><img className="scale-with-grid" src="tkImages/1_Discover_Gorgias.png" alt="" width="123" height="100" /> </div>
-                                      </div>
-                                      <hr className="no_line" style={{margin: 0+" auto "+10+"px"}}/>
-                                      <h4 className="tkFont-Bold tkFont-Theme">Discover Gorgias</h4>
-                                      <p style={{minHeight: 100+"px"}}>
-                                          Nulla accumsan consequat magna, vel faucibus tellus vulputate ac. Aliquam consectetur feugiat diam, id porta putra madre
-                                      </p>
-                                  </div>
-                              </div>
-
-                              <div className="column mcb-column one-third column_column" style={{margin: 1+"% "+ 1+"%"}}>
-                                  <div className="column_attr align_center tkPanels">
-                                      <div className="image_frame image_item no_link scale-with-grid alignnone no_border">
-                                          <div className="image_wrapper"><img className="scale-with-grid" src="tkImages/2_StoryLand.png" alt="" width="123" height="100" /> </div>
-                                      </div>
-                                      <hr className="no_line" style={{margin: 0 +"auto "+10+"px"}}/>
-                                      <h4 className="tkFont-Bold tkFont-Theme">Storyland</h4>
-                                      <p style={{minHeight: 100+"px"}}>
-                                          Vivamus a nibh magna. Sed porttitor vehicula purus, at congue sem feugiat at. Pellentesque rutrum tempor tincidunt
-                                      </p>
-                                  </div>
-                              </div>
-
-                              <div className="column mcb-column one-third column_column" style={{margin: 1+"% "+ 1+"%"}}>
-                                  <div className="column_attr align_center tkPanels">
-                                      <div className="image_frame image_item no_link scale-with-grid alignnone no_border">
-                                          <div className="image_wrapper"><img className="scale-with-grid" src="tkImages/3_Touch_For_Love.png" alt="" width="123" height="100" /> </div>
-                                      </div>
-                                      <hr className="no_line" style={{margin: 0+" auto"+10+"px"}}/>
-                                      <h4 className="tkFont-Bold tkFont-Theme">Touch for Love</h4>
-                                      <p style={{minHeight: 100+"px"}}>
-                                          Nunc pharetra erat magna in tempor risus tincidunt tristique. Maecenas bibendum mauris eu eros convallis sagittis
-                                      </p>
-                                  </div>
-                              </div>
-
-                              <div className="column mcb-column one-third column_column" style={{margin: 1+"% "+1+"%"}}>
-                                  <div className="column_attr align_center tkPanels">
-                                      <div className="image_frame image_item no_link scale-with-grid alignnone no_border">
-                                          <div className="image_wrapper"><img className="scale-with-grid" src="tkImages/4_iFeel.png" alt="" width="123" height="100" /> </div>
-                                      </div>
-                                      <hr className="no_line" style={{margin: 0 +" auto "+ 10+"px"}} />
-                                      <h4 className="tkFont-Bold tkFont-Theme">iFeel</h4>
-                                      <p style={{minHeight: 100+"px"}}>
-                                          Justo in erat luctus euismod. Phasellus et orci ac risus mattis pretium at quis justo. Morbi molestie pulvinar.
-                                      </p>
-                                  </div>
-                              </div>
-
-                              <div className="column mcb-column one-third column_column" style={{margin: 1+"% "+1+"%"}}>
-                                  <div className="column_attr align_center tkPanels">
-                                      <div className="image_frame image_item no_link scale-with-grid alignnone no_border">
-                                          <div className="image_wrapper"><img className="scale-with-grid" src="tkImages/5_StayOn.png" alt="" width="123" height="100" /> </div>
-                                      </div>
-                                      <hr className="no_line" style={{margin: 0+" auto "+10+"px"}}/>
-                                      <h4 className="tkFont-Bold tkFont-Theme">Stay On</h4>
-                                      <p style={{minHeight: 100+"px"}}>
-                                          Justo in erat luctus euismod. Phasellus et orci ac risus mattis pretium at quis justo. Morbi molestie pulvinar.
-                                      </p>
-                                  </div>
-                              </div>
-
-                              <div className="column mcb-column one-third column_column" style={{margin: 1+"% "+1+"%"}}>
-                                  <div className="column_attr align_center tkPanels">
-                                      <div className="image_frame image_item no_link scale-with-grid alignnone no_border">
-                                          <div className="image_wrapper"><img className="scale-with-grid" src="tkImages/6_Hotspot.png" alt="" width="123" height="100" /> </div>
-                                      </div>
-                                      <hr className="no_line" style={{margin: 0+" auto "+10+"px"}}/>
-                                      <h4 className="tkFont-Bold tkFont-Theme">Hotspot</h4>
-                                      <p style={{minHeight:100+"px"}}>
-                                          Justo in erat luctus euismod. Phasellus et orci ac risus mattis pretium at quis justo. Morbi molestie pulvinar.
-                                      </p>
-                                  </div>
-                              </div>
+                              <TextTilesPanels todos={this.state.todos}/>
 
                           </div>
                       </div>
