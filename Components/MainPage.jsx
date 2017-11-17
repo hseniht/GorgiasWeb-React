@@ -9,7 +9,6 @@ export class MainPage extends React.Component {
     this.setState({isLogin:false});
   }
 
-
    render() {
       return(
         <div>

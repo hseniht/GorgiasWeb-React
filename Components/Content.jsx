@@ -6,6 +6,12 @@ import {AppDownload} from './MainSections/4-AppDownload.jsx';
 import {WhoIsGorgias} from './MainSections/2-WhoIsGorgias.jsx';
 import {CelebGrid} from './MainSections/2.1-CelebGrid.jsx';
 
+import {ContactWebCover} from './ContactSections/1-ContactWebCover.jsx';
+import {ContactTextBanner} from './ContactSections/2-ContactTextBanner.jsx';
+import {Locations} from './ContactSections/3-Locations.jsx';
+import {ContactForm} from './ContactSections/4-ContactForm.jsx';
+
+
 export class Content extends React.Component {
   render (){
     return (
@@ -14,13 +20,10 @@ export class Content extends React.Component {
                 <div className="sections_group">
                   <div className="entry-content">
 
-                    <WhatIsGorgias/>
-                    <TopStories/>
-                    <WhoIsGorgias/>
-                    <CelebGrid/>
-                    <WhyBecomeGorgias/>
-                    <AppDownload/>
-
+                    <ContactWebCover/>
+                    <ContactTextBanner/>
+                    <Locations/>
+                    <ContactForm/>
                   </div>
                 </div>
               </div>
