@@ -21,6 +21,7 @@ export class WhyBecomeGorgias extends React.Component {
                       </div>
                       <div className="wrap mcb-wrap one  valign-top clearfix" style={{margin: 50+"px auto"}}>
                           <div className="mcb-wrap-inner">
+
                               <div className="column mcb-column one-third column_column" style={{margin: 1+"% "+ 1+"%"}}>
                                   <div className="column_attr align_center tkPanels">
                                       <div className="image_frame image_item no_link scale-with-grid alignnone no_border">
@@ -98,6 +99,7 @@ export class WhyBecomeGorgias extends React.Component {
                                       </p>
                                   </div>
                               </div>
+
                           </div>
                       </div>
                   </div>
