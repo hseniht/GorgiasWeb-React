@@ -31,14 +31,8 @@ export class Content extends React.Component {
                 <div className="sections_group">
                   <div className="entry-content">
 
-                    <AboutHeadingCover/>
-                    <AboutUs/>
-                    <OurStory/>
-                    <MissionVision/>
-                    <ImageBanner/>
-                    <TextTilesPanels/>
-                    <Teams/>
-                    <AppDownloadBanner/>
+                    <WhoIsGorgias/>
+                    <CelebGrid/>
 
                   </div>
                 </div>
