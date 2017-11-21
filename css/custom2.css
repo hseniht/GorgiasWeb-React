@@ -217,6 +217,20 @@ background-image: linear-gradient(120deg, #5c22ff 0%, #723493 100%);
   outline: none;
   background-color: #B90350;
 }
+
+
+/*=-=-=-=-=-=-=-=-=-=-=-  App Profile Page  -=-=-=-=-=-=-=-=-=-=-=-=-=--=*/
+
+.tk-AppAvatarImg {
+  width: 100px;
+  height: 100px;
+  border-radius: 33%;
+  overflow: hidden;
+  position: relative;
+  top: calc(-20px/2);
+  left: calc(50% - 50px);
+  border: 2px solid #ff0088;
+}
 /*-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-uneeded-=-=-=-=-=-=-=--=-=-=-=-=-=--=-=--*/
 
 

@@ -6,7 +6,7 @@ import {MasterContent} from './MasterContent.jsx'
 export class MainPage extends React.Component {
 
   componentWillMount(){
-    this.setState({isLogin:false});
+    this.setState({isLogin:true});
   }
 
    render() {

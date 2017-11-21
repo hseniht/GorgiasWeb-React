@@ -1,5 +1,6 @@
 import React from 'react';
 import {LoginForm1} from './LoginSections/LoginForm1.jsx';
+import {AppProfile} from './AppProfileSections/AppProfile.jsx';
 
 
 export class LoginContent extends React.Component {
@@ -12,7 +13,7 @@ export class LoginContent extends React.Component {
                 <a href="index-GorgiasFull.html">go back to Gorgias</a>
               </div>
 
-              <LoginForm1/>
+              <AppProfile/>
 
               <footer id="Footer" class="clearfix" style={{backgroundColor:"rgba(0,0,0,0.5)", position:"fixed"}}>
                 <div className="footer_copy">
