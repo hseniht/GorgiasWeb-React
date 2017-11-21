@@ -15,7 +15,7 @@ export class LoginContent extends React.Component {
 
               <AppProfile/>
 
-              <footer id="Footer" class="clearfix" style={{backgroundColor:"rgba(0,0,0,0.5)", position:"fixed"}}>
+              <footer id="Footer" className="clearfix" style={{backgroundColor:"rgba(0,0,0,0.5)", position:"fixed"}}>
                 <div className="footer_copy">
                   <div className="container">
                     <div className="column one" style={{marginBottom:10+"px",paddingTop:20+"px"}}>

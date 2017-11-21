@@ -7,10 +7,8 @@ export class AppProfile extends React.Component {
     this.state ={editing:true}
   }
 
-  _handleClick (){
-    this.setState({
-          editing:!this.state.editing
-        });
+  edit (){
+    this.setState({editing:false});
   }
 
   renderNormal (){
@@ -32,7 +30,7 @@ export class AppProfile extends React.Component {
                                  <h3 style={{textAlign:'center', color: "#ff0088", marginBottom:20+"px"}}>Twwinko</h3>
                                  <label className="login-label tkFont1 tkFont-Form" style={{textAlign:"center", width:245+"px"}}>To Get my Micro-App, click on the "Access to Private" and follow instruction</label>
                                  <div className="column one" style={{margin:0}}>
-                                     <input onClick={this._handleClick.bind(this)} type="submit" value="Access to Private App" id="submit" className="tkFont-Bold" />
+                                     <input onClick={this.edit} type="submit" value="Access to Private App" id="submit" className="tkFont-Bold" />
                                  </div>
 
                                 </form>
@@ -63,11 +61,9 @@ export class AppProfile extends React.Component {
                                <form>
 
                                  <img className="tk-AppAvatarImg" src="https://gorgiasasia.blob.core.windows.net/images/profile-1109.jpg?timestamp=489" width="50" height="50" />
-                                 <label className="login-label tkFont1 tkFont-Form" style={{textAlign:"center", width:245+"px"}}>
-                                   Android, To add this app, open  the browser option menu and tap on Add to homescreen.
-                                   <br/>The menu can be accessed by pressing the menu hardware button if your device has one, or by tapping the top right menu icon</label>
-
-                              </form>
+                                 <label className="login-label tkFont1 tkFont-Form" style={{textAlign:"center", width:245+"px"}}>Android, To add this app, open  the browser option menu and tap on Add to homescreen.
+                                    The menu can be accessed by pressing the menu hardware button if your device has one, or by tapping the top right menu icon</label>
+                                </form>
                             </div>
                           </div>
                         </div>
