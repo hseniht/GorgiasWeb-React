@@ -31,7 +31,7 @@ export class Content extends React.Component {
                 <div className="sections_group">
                   <div className="entry-content">
 
-                    <WhoIsGorgias/>
+                    <TopStories/>
                     <CelebGrid/>
 
                   </div>

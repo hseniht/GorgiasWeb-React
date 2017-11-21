@@ -4,7 +4,7 @@ export class AppProfile extends React.Component {
 
   constructor(){
   super();
-    this.state ={editing:true} 
+    this.state ={editing:true}
   }
 
   _handleClick (){
@@ -29,12 +29,10 @@ export class AppProfile extends React.Component {
 
                                  <img className="tk-AppAvatarImg" src="https://gorgiasasia.blob.core.windows.net/images/profile-1109.jpg?timestamp=489" width="50" height="50" />
 
-                                 <h3 style={{textAlign:'center', color: "#ff0088", marginBottom:20+"px"}}>Twinko</h3>
-                                 <label className="login-label tkFont1 tkFont-Form" style={{textAlign:"center", width:245+"px"}}>
-                                   <span>To Get my Micro-App, click on the "Access to Private" and follow instruction</span>
-                                 </label>
+                                 <h3 style={{textAlign:'center', color: "#ff0088", marginBottom:20+"px"}}>Twwinko</h3>
+                                 <label className="login-label tkFont1 tkFont-Form" style={{textAlign:"center", width:245+"px"}}>To Get my Micro-App, click on the "Access to Private" and follow instruction</label>
                                  <div className="column one" style={{margin:0}}>
-                                     <input onClick={()=> this._handleClick()} type="submit" value="Access to Private App" id="submit" className="tkFont-Bold" />
+                                     <input onClick={this._handleClick.bind(this)} type="submit" value="Access to Private App" id="submit" className="tkFont-Bold" />
                                  </div>
 
                                 </form>
@@ -66,9 +64,8 @@ export class AppProfile extends React.Component {
 
                                  <img className="tk-AppAvatarImg" src="https://gorgiasasia.blob.core.windows.net/images/profile-1109.jpg?timestamp=489" width="50" height="50" />
                                  <label className="login-label tkFont1 tkFont-Form" style={{textAlign:"center", width:245+"px"}}>
-                                   <p>Android, To add this app, open the browser option menu <img src="tkImages/android-home-gorgias.png" width="20"/> and tap on Add to homescreen.</p>
-                                   <p>The menu can be accessed by pressing the menu hardware button if your device has one, or by tapping the top right menu icon <img src="tkImages/android-home-gorgias.png" width="20"/></p>
-                                 </label>
+                                   Android, To add this app, open  the browser option menu and tap on Add to homescreen.
+                                   <br/>The menu can be accessed by pressing the menu hardware button if your device has one, or by tapping the top right menu icon</label>
 
                               </form>
                             </div>
