@@ -10,7 +10,7 @@ export class CelebGrid extends React.Component {
       isLoading: true,
     };
 
-this.handleLoadMore = this.handleLoadMore.bind(this);
+    this.handleLoadMore = this.handleLoadMore.bind(this);
 
   }
 
@@ -48,6 +48,55 @@ this.handleLoadMore = this.handleLoadMore.bind(this);
       console.log(data);
 
     });
+
+
+    /*get MAIN ENTITIES*/
+
+    var urlMainEntities = "http://gorgiasapp-v3.azurewebsites.net/api/Web/V2/MainEntities";
+
+    fetch(urlMainEntities)
+      .then(function(response) {
+
+        return response.json();
+      })
+      .then(dataMainEntities => {
+
+        console.log(dataMainEntities);
+        console.log("countries loaded");
+        console.log(dataMainEntities.Result.Country);
+        this.setState({ countries: dataMainEntities.Result.Country, isLoading:false });
+
+      });
+
+  }
+
+  handleLoadMore() {
+    console.log("im working");
+    var url = "http://gorgiasapp-v3.azurewebsites.net/api/Web/V2/Profiles/";
+    var that = this;
+
+    var bodyData = this.state.filteringData;
+    bodyData.PageNumber += 1;
+    console.log(bodyData);
+
+
+    fetch(url, {
+      method: 'POST',
+      headers: {
+        'Accept': 'application/json',
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(bodyData)
+    }).then(function(response) {
+
+      return response.json();
+    })
+    .then(data => {
+      const newResult = this.state.profiles.concat(data.Result);
+      this.setState({ profiles:newResult, isLoading:false, filteringData: bodyData });
+
+
+    });
   }
 
   renderProfile(profileData){
@@ -67,34 +116,15 @@ this.handleLoadMore = this.handleLoadMore.bind(this);
     )
   }
 
-handleLoadMore() {
-  console.log("im working");
-  var url = "http://gorgiasapp-v3.azurewebsites.net/api/Web/V2/Profiles/";
-  var that = this;
-
-  var bodyData = this.state.filteringData;
-  bodyData.PageNumber += 1;
-  console.log(bodyData);
-
-
-  fetch(url, {
-    method: 'POST',
-    headers: {
-      'Accept': 'application/json',
-      'Content-Type': 'application/json',
-    },
-    body: JSON.stringify(bodyData)
-  }).then(function(response) {
-
-    return response.json();
-  })
-  .then(data => {
-    const newResult = this.state.profiles.concat(data.Result);
-    this.setState({ profiles:newResult, isLoading:false, filteringData: bodyData });
+  renderCountry(countryData){
+    return (
+      <li key={countryData.CountryID} className={countryData.CountryName}>
+          <a data-rel={".tag-" + countryData.CountryName} href="content/journalist/tag-design.html">Malaysia</a>
+      </li>
+    )
+  }
 
 
-  });
-}
 
 
   render (){
@@ -154,30 +184,9 @@ handleLoadMore() {
                                               <li className="reset current-cat">
                                                   <a className="all" data-rel="*" href="#">Show all</a>
                                               </li>
-                                              <li className="malaysia">
-                                                  <a data-rel=".tag-malaysia" href="content/journalist/tag-design.html">Malaysia</a>
-                                              </li>
-                                              <li className="framework">
-                                                  <a data-rel=".tag-framework" href="content/journalist/tag-framework.html">Framework</a>
-                                              </li>
-                                              <li className="grid">
-                                                  <a data-rel=".tag-grid" href="content/journalist/tag-grid.html">Grid</a>
-                                              </li>
-                                              <li className="motion">
-                                                  <a data-rel=".tag-motion" href="content/journalist/tag-motion.html">Motion</a>
-                                              </li>
-                                              <li className="themeforest">
-                                                  <a data-rel=".tag-themeforest" href="content/journalist/tag-themeforest.html">Themeforest</a>
-                                              </li>
-                                              <li className="video">
-                                                  <a data-rel=".tag-video" href="content/journalist/tag-video.html">Video</a>
-                                              </li>
-                                              <li className="wordpress">
-                                                  <a data-rel=".tag-wordpress" href="content/journalist/tag-wordpress.html">Wordpress</a>
-                                              </li>
-                                              <li className="close">
-                                                  <a href="#"><i className="icon-cancel"></i></a>
-                                              </li>
+
+                                              {this.state.countries != null ? this.state.countries.map(country => this.renderCountry(country)) : null}
+
                                           </ul>
 
                                           <ul className="authors">
@@ -198,7 +207,7 @@ handleLoadMore() {
                                   <div className="blog_wrapper clearfix">
                                       <div className="posts_group lm_wrapper col-5 masonry tiles isotope">
 
-                                          {this.state.profiles.map(item => this.renderProfile(item))}
+                                          {this.state.profiles != null ? this.state.profiles.map(item => this.renderProfile(item)) : null}
 
                                       </div>
                                       {/*One full width row*/}
