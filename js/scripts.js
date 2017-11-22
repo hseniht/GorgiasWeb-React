@@ -366,7 +366,7 @@ jQuery(document).ready(function() {
 	/* ---------------------------------------------------------------------------
 	 * Content sliders
 	 * --------------------------------------------------------------------------- */
-	//mfnSliderContent();
+	mfnSliderContent();
 	mfnSliderOffer();
 	mfnSliderOfferThumb();
 	mfnSliderBlog();

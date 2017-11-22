@@ -6,7 +6,7 @@ export class TopStories extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      items:null,
+
       isLoading: true,
     };
   }
@@ -28,14 +28,13 @@ export class TopStories extends React.Component {
 
   renderStory(story){
     return (
-      <li key={story.AlbumID} className=" floatr tklist content_slider_li" style={{width:200 + "px", float:"left",}}>
+      <li key={story.AlbumID} className="floatr tklist content_slider_li" style={{width:200 + "px", float:"left",}}>
         <div>
           <img width="287" height="339" className="tk fit2" src={story.cdnAlbumCover} alt=""/>
         </div>
         <div className="desc">
           <p>{story.AlbumName}</p>
-          <p className="tkBottom-p-font">24 <i className="icon-eye"></i> 8<i className="icon-comment-fa"></i></p>
-
+          <p className="tkBottom-p-font">24</p>
         </div>
         <div className="full-card-overlay">
           <div className="tk tp-caption Photography-Button rev-btn ">OPEN IN APP</div>
@@ -62,10 +61,7 @@ export class TopStories extends React.Component {
 
                   <ul className="content_slider_ulio tk">
                     {this.state.items.map(item => this.renderStory(item))}
-
-
                   </ul>
-
                   <a className="button button_js slider_prev" href="#"><span className="button_icon"><i className="icon-left-open-big"></i></span></a><a className="button button_js slider_next" href="#"><span className="button_icon"><i className="icon-right-open-big"></i></span></a>
                   <div className="slider_pagination"></div>
                 </div>
