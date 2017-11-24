@@ -34,29 +34,7 @@ export class CelebGrid extends React.Component {
       SubscriptionTypeID : 3
     }
 
-    fetch(url, {
-      method: 'POST',
-      headers: {
-        'Accept': 'application/json',
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify(bodyData)
-    }).then(function(response) {
-
-      return response.json();
-    })
-    .then(function(data) {
-      that.setState({
-                      profiles: data.Result,
-                      isLoading:false,
-                      filteringData: bodyData
-                    });
-
-      console.log(data);
-
-    });
-
-
+    this.prepareProfiles(bodyData);
     /*GET method MAIN ENTITIES*/
 
     var urlMainEntities = "http://gorgiasapp-v3.azurewebsites.net/api/Web/V2/MainEntities";
@@ -115,54 +93,27 @@ export class CelebGrid extends React.Component {
     });
   }
 
-  handleCountryFilter (countryData){
-    console.log("filtering country..");
+  handleProfileTypeFilter (profileTypeID) {
     //get filtering data from state
     var filteringData = this.state.filteringData;
 
-    //
-    filteringData.CountryID = countryData;
-    console.log("filtering country..", filteringData);
-
-
-    var url = "http://gorgiasapp-v3.azurewebsites.net/api/Web/V2/Profiles/";
-    var that = this;
-
-    fetch(url, {
-      method: 'POST',
-      headers: {
-        'Accept': 'application/json',
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify(filteringData)
-    }).then(function(response) {
-
-      return response.json();
-    })
-    .then(function(data) {
-      that.setState({
-                      profiles: data.Result,
-                      isLoading:false,
-                      filteringData: filteringData
-                    });
-
-      console.log(data);
-
-    });
-
-    console.log("after filtering we get",countryData);
+    //i change new value to profile id
+    filteringData.ProfileTypeID = profileTypeID > 0 ? profileTypeID : null;
+    this.prepareProfiles(filteringData);
+    console.log("filtering country ;) ICE CREAM", countryID, filteringData);
   }
 
-  handleProfileTypeFilter(profileData) {
-
-    console.log("filtering profileType...", profileData);
-
+  handleCountryFilter (countryID) {
+    //get filtering data from state
     var filteringData = this.state.filteringData;
 
-    filteringData.ProfileTypeID = profileData;
+    //i change new value to country id
+    filteringData.CountryID = countryID > 0 ? countryID : null;
+    this.prepareProfiles(filteringData);
+    console.log("filtering country ;) ICE CREAM", countryID, filteringData);
+  }
 
-    console.log("we got the profileTypeID?",profileData);
-
+  prepareProfiles(filteringData){
     var url = "http://gorgiasapp-v3.azurewebsites.net/api/Web/V2/Profiles/";
     var that = this;
 
@@ -187,7 +138,6 @@ export class CelebGrid extends React.Component {
       console.log(data);
 
     });
-
   }
 
   renderProfile(profileData){
@@ -210,7 +160,7 @@ export class CelebGrid extends React.Component {
   renderCountry(countryData){
     return (
       <li key={countryData.CountryID} className={countryData.CountryName}>
-          <a data-rel={".tag-" + countryData.CountryName} onClick={()=>this.handleCountryFilter(countryData.CountryID)}>{countryData.CountryName}</a>
+          <a data-rel={".tag-" + countryData.CountryName} onClick={() => this.handleCountryFilter(countryData.CountryID)} >{countryData.CountryName}</a>
       </li>
     )
   }
@@ -218,7 +168,7 @@ export class CelebGrid extends React.Component {
   renderProfileType(profileTypeData){
     return (
       <li key={profileTypeData.ProfileTypeID} className={profileTypeData.ProfileTypeName}>
-          <a data-rel={".author-" + profileTypeData.ProfileTypeName} onClick={()=>this.handleProfileTypeFilter(profileTypeData.ProfileTypeID)}>{profileTypeData.ProfileTypeName}</a>
+          <a data-rel={".author-" + profileTypeData.ProfileTypeName} onClick={() => this.handleProfileTypeFilter(profileTypeData.ProfileTypeID)}>{profileTypeData.ProfileTypeName}</a>
       </li>
     )
   }
@@ -280,7 +230,7 @@ export class CelebGrid extends React.Component {
 
                                           <ul className="tags">
                                               <li className="reset current-cat">
-                                                  <a className="all" data-rel="*" href="#">Show all</a>
+                                                  <a className="all" data-rel="*" onClick={() => this.handleCountryFilter(0)}>Show all</a>
                                               </li>
 
                                               {this.state.countries != null ? this.state.countries.map(country => this.renderCountry(country)) : null}
