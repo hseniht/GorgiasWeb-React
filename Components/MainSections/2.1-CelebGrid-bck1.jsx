@@ -8,7 +8,6 @@ export class CelebGrid extends React.Component {
     this.state = {
 
       isLoading: true,
-      bgColor:"red"
     };
 
     this.handleLoadMore = this.handleLoadMore.bind(this);
@@ -137,8 +136,6 @@ export class CelebGrid extends React.Component {
                     });
 
       console.log(data);
-      console.log("this is post profile!")
-      console.log(data.Result);
 
     });
   }
@@ -151,8 +148,8 @@ export class CelebGrid extends React.Component {
           <div className="post-desc-wrapper">
               <div className="post-desc">
                   <div className="post-title">
-                      <h2 className="entry-title larger"><a href="#">{profileData.ProfileFullname}</a></h2>
-                      <h2 className="entry-title larger tkFontSecondaryName" style={{marginBottom:0+"px"}}><a href="">{profileData.ProfileURL}</a></h2>
+                      <h2 className="entry-title larger"><a href="content/journalist/item-11.html">{profileData.ProfileFullname}</a></h2>
+                      <h2 className="entry-title larger tkFontSecondaryName" style={{marginBottom:0+"px"}}><a href="content/journalist/item-12.html">{profileData.ProfileURL}</a></h2>
                   </div>
               </div>
           </div>
@@ -177,22 +174,6 @@ export class CelebGrid extends React.Component {
   }
 
 
-//buttons
-toggleCategories(){
-  this.setState({showCategoriesTag:!this.state.showCategoriesTag});
-}
-
-toggleCountries(){
-  this.setState({showCountriesTag:!this.state.showCountriesTag});
-}
-
-toggleProfileTypes(){
-  this.setState({showProfileTypesTag:!this.state.showProfileTypesTag});
-}
-
-toggleIndustries(){
-  this.setState({showIndustriesTag:!this.state.showIndustriesTag});
-}
 
   render (){
     return (
@@ -200,35 +181,29 @@ toggleIndustries(){
             <div className="section mcb-section tkSection-paddingBottom-only bg-color-1">
                   <div className="section_wrapper clearfix">
                       <div className="items_group clearfix">
+                          {/* One full width row*/}
                           <div className="column one column_blog ">
                               <div className="column_filters">
                                   {/* Filter Area*/}
                                   <div id="Filters" className="isotope-filters" data-parent="column_filters" style={{margin: 30+"px",fontSize: 16+"px", marginLeft: "auto",marginRight: "auto", marginTop: 30+"px",marginBottom: 30+"px",width:"fit-content"}}>
 
-                                      {/*Grid filter Buttons*/}
                                       <ul className="filters_buttons">
                                           <li className="label">
                                               Filter by
                                           </li>
-
-                                          <li className="categories" onClick={this.toggleCategories.bind(this)}>
-                                              <a className="open"><i className="icon-tag"></i>Categories<i className="icon-down-dir"></i></a>
+                                          <li className="categories">
+                                              <a className="open" href="#"><i className="icon-tag"></i>Categories<i className="icon-down-dir"></i></a>
                                           </li>
-                                          <li className="tags" onClick={this.toggleCountries.bind(this)}>
-                                              <a className="open"><i className="icon-docs"></i>Countries<i className="icon-down-dir"></i></a>
+                                          <li className="tags">
+                                              <a className="open" href="#"><i className="icon-docs"></i>Countries<i className="icon-down-dir"></i></a>
                                           </li>
-                                          <li className="authors" onClick={this.toggleProfileTypes.bind(this)}>
-                                              <a className="open"><i className="icon-user"></i>ProfileType<i className="icon-down-dir"></i></a>
-                                          </li>
-                                          <li className="industries" onClick={this.toggleIndustries.bind(this)}>
-                                              <a className="open"><i className="icon-tag"></i>Industries<i className="icon-down-dir"></i></a>
+                                          <li className="authors">
+                                              <a className="open" href="#"><i className="icon-user"></i>ProfileType<i className="icon-down-dir"></i></a>
                                           </li>
                                       </ul>
 
                                       <div className="filters_wrapper" style={{display:"block"}}>
 
-                                          {
-                                            this.state.showCategoriesTag ?
                                           <ul className="categories">
                                               <li className="reset current-cat">
                                                   <a className="all" data-rel="*" href="#">Show all</a>
@@ -252,57 +227,30 @@ toggleIndustries(){
                                                   <a href="#"><i className="icon-cancel"></i></a>
                                               </li>
                                           </ul>
-                                           : null
-                                          }
 
-                                          {
-                                            this.state.showCountriesTag ?
-                                            <ul className="tags">
-                                                <li className="reset current-cat">
-                                                    <a className="all" data-rel="*" onClick={() => this.handleCountryFilter(0)}>Show all</a>
-                                                </li>
+                                          <ul className="tags">
+                                              <li className="reset current-cat">
+                                                  <a className="all" data-rel="*" onClick={() => this.handleCountryFilter(0)}>Show all</a>
+                                              </li>
 
-                                                {this.state.countries != null ? this.state.countries.map(country => this.renderCountry(country)) : null}
+                                              {this.state.countries != null ? this.state.countries.map(country => this.renderCountry(country)) : null}
 
-                                                <li className="close">
-                                                    <a href="#"><i className="icon-cancel"></i></a>
-                                                </li>
-                                            </ul>
-                                            : null
-                                          }
+                                              <li className="close">
+                                                  <a href="#"><i className="icon-cancel"></i></a>
+                                              </li>
+                                          </ul>
 
-                                          {
-                                            this.state.showProfileTypesTag ?
                                           <ul className="authors">
                                               <li className="reset current-cat">
                                                   <a className="all" data-rel="*" href="#">Show all</a>
                                               </li>
-
+                                            
                                               {this.state.profileTypes != null ? this.state.profileTypes.map(profileType => this.renderProfileType(profileType)) : null}
 
                                               <li className="close">
                                                   <a href="#"><i className="icon-cancel"></i></a>
                                               </li>
                                           </ul>
-                                          : null
-                                          }
-
-                                          {
-                                            this.state.showIndustriesTag ?
-                                          <ul className="industries">
-                                              <li className="reset current-cat">
-                                                  <a className="all" data-rel="*" href="#">Show all</a>
-                                              </li>
-                                              <li className="hot-news">
-                                                  <a data-rel=".category-hot-news" href="#">Hot news</a>
-                                              </li>
-
-                                              <li className="close">
-                                                  <a href="#"><i className="icon-cancel"></i></a>
-                                              </li>
-                                          </ul>
-                                          : null
-                                          }
 
                                       </div>
                                   </div>

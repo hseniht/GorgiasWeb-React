@@ -140,8 +140,9 @@ p a, p a:visited {
 img.scale-with-grid, #Content img {
 	max-width: 100%;
 	height: auto;
-	/*min-height: 220px;
-	max-height: 220px;*/
+	/*min-height: 215px;*/
+	max-height: 215px;
+	object-fit: cover;
 }
 .google-map img {
 	max-width: none !important;
