@@ -52,15 +52,47 @@ export class CelebGrid extends React.Component {
         console.log(dataMainEntities.Result.Country);
         console.log(dataMainEntities.Result.ProfileType);
         console.log("profile type to load");
+        console.log(dataMainEntities.Result.Industry);
+        console.log("industries loaded")
 
         this.setState({
                         countries: dataMainEntities.Result.Country,
                         profileTypes:dataMainEntities.Result.ProfileType,
-                        isLoading:false
+                        isLoading:false,
+                        industries:dataMainEntities.Result.Industry
                       });
 
       });
 
+  }
+
+  prepareProfiles(filteringData){
+    var url = "http://gorgiasapp-v3.azurewebsites.net/api/Web/V2/Profiles/";
+    var that = this;
+
+    fetch(url, {
+      method: 'POST',
+      headers: {
+        'Accept': 'application/json',
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(filteringData)
+    }).then(function(response) {
+
+      return response.json();
+    })
+    .then(function(data) {
+      that.setState({
+                      profiles: data.Result,
+                      isLoading:false,
+                      filteringData: filteringData
+                    });
+
+      console.log(data);
+      console.log("this is post profile!")
+      console.log(data.Result);
+
+    });
   }
 
   handleLoadMore() {
@@ -114,35 +146,6 @@ export class CelebGrid extends React.Component {
     console.log("filtering country ;) ICE CREAM", countryID, filteringData);
   }
 
-  prepareProfiles(filteringData){
-    var url = "http://gorgiasapp-v3.azurewebsites.net/api/Web/V2/Profiles/";
-    var that = this;
-
-    fetch(url, {
-      method: 'POST',
-      headers: {
-        'Accept': 'application/json',
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify(filteringData)
-    }).then(function(response) {
-
-      return response.json();
-    })
-    .then(function(data) {
-      that.setState({
-                      profiles: data.Result,
-                      isLoading:false,
-                      filteringData: filteringData
-                    });
-
-      console.log(data);
-      console.log("this is post profile!")
-      console.log(data.Result);
-
-    });
-  }
-
   renderProfile(profileData){
     return (
       <div key={profileData.ProfileID} className="post-item isotope-item clearfix post-2277 post  format-standard has-post-thumbnail  category-lifestyle category-technology tag-Malaysia author-Female">
@@ -176,6 +179,13 @@ export class CelebGrid extends React.Component {
     )
   }
 
+  renderIndustry(industriesData){
+    return (
+      <li key={industriesData.IndustryID} className={industriesData.IndustryName}>
+          <a data-rel={".category-" + industriesData.IndustryName} >{industriesData.IndustryName}</a>
+      </li>
+    )
+  }
 
 //buttons
 toggleCategories(){
@@ -248,8 +258,8 @@ toggleIndustries(){
                                               <li className="technology">
                                                   <a data-rel=".category-technology" href="#">Technology</a>
                                               </li>
-                                              <li className="close">
-                                                  <a href="#"><i className="icon-cancel"></i></a>
+                                              <li className="close" onClick={this.toggleCategories.bind(this)}>
+                                                  <a><i className="icon-cancel"></i></a>
                                               </li>
                                           </ul>
                                            : null
@@ -264,8 +274,8 @@ toggleIndustries(){
 
                                                 {this.state.countries != null ? this.state.countries.map(country => this.renderCountry(country)) : null}
 
-                                                <li className="close">
-                                                    <a href="#"><i className="icon-cancel"></i></a>
+                                                <li className="close" onClick={this.toggleCountries.bind(this)}>
+                                                    <a><i className="icon-cancel"></i></a>
                                                 </li>
                                             </ul>
                                             : null
@@ -280,8 +290,8 @@ toggleIndustries(){
 
                                               {this.state.profileTypes != null ? this.state.profileTypes.map(profileType => this.renderProfileType(profileType)) : null}
 
-                                              <li className="close">
-                                                  <a href="#"><i className="icon-cancel"></i></a>
+                                              <li className="close" onClick={this.toggleProfileTypes.bind(this)}>
+                                                  <a><i className="icon-cancel"></i></a>
                                               </li>
                                           </ul>
                                           : null
@@ -297,8 +307,10 @@ toggleIndustries(){
                                                   <a data-rel=".category-hot-news" href="#">Hot news</a>
                                               </li>
 
-                                              <li className="close">
-                                                  <a href="#"><i className="icon-cancel"></i></a>
+                                              {this.state.industries.map(industries=>this.renderIndustry(industries))}
+
+                                              <li className="close" onClick={this.toggleIndustries.bind(this)}>
+                                                  <a><i className="icon-cancel"></i></a>
                                               </li>
                                           </ul>
                                           : null
@@ -310,7 +322,7 @@ toggleIndustries(){
                                   <div className="blog_wrapper clearfix">
                                       <div className="posts_group lm_wrapper col-5 masonry tiles isotope">
 
-                                          {this.state.profiles != null ? this.state.profiles.map(item => this.renderProfile(item)) : null}
+                                          {this.state.profiles != null ? this.state.profiles.map(profile => this.renderProfile(profile)) : null}
 
                                       </div>
                                       {/*One full width row*/}

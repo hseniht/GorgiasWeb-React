@@ -53,6 +53,7 @@ export class CelebGrid extends React.Component {
                     });
 
       console.log(data);
+      console.log("data after POSTS");
 
     });
 
@@ -83,6 +84,7 @@ export class CelebGrid extends React.Component {
       });
 
   }
+// end of componentWillMount
 
   handleLoadMore() {
     console.log("im working");
