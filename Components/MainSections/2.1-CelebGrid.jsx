@@ -89,8 +89,8 @@ export class CelebGrid extends React.Component {
                     });
 
       console.log(data);
-      console.log("this is post profile!")
-      console.log(data.Result);
+      console.log("above from POST!")
+      console.log(data.Result, 'prepareProfiles');
 
     });
   }
@@ -101,7 +101,9 @@ export class CelebGrid extends React.Component {
     var that = this;
 
     var bodyData = this.state.filteringData;
-    bodyData.PageNumber += 1;
+
+    bodyData.PageNumber += 1 ;
+    // bodyData.PageNumber += 1;
     console.log(bodyData);
 
 
@@ -117,11 +119,21 @@ export class CelebGrid extends React.Component {
       return response.json();
     })
     .then(data => {
-      const newResult = this.state.profiles.concat(data.Result);
+      var newResult = this.state.profiles.concat(data.Result);
+
+      console.log(this.state.profiles, '1');
+      console.log(data.Result, '2');
+      console.log(newResult, '3');
+
+
       this.setState({
                       profiles:newResult,
                       isLoading:false,
-                      filteringData: bodyData });
+                      filteringData: bodyData
+                    });
+
+     console.log(this.state.profiles, '4');
+
 
     });
   }
@@ -146,6 +158,15 @@ export class CelebGrid extends React.Component {
     console.log("filtering country ;) ICE CREAM", countryID, filteringData);
   }
 
+  handleIndustryFilter(industryID){
+
+    var filteringData = this.state.filteringData;
+
+    filteringData.IndustryID = industryID > 0 ? industryID :null;
+    this.prepareProfiles(filteringData);
+    console.log("filtering insdustries data", industryID, filteringData);
+  }
+
   renderProfile(profileData){
     return (
       <div key={profileData.ProfileID} className="post-item isotope-item clearfix post-2277 post  format-standard has-post-thumbnail  category-lifestyle category-technology tag-Malaysia author-Female">
@@ -154,8 +175,8 @@ export class CelebGrid extends React.Component {
           <div className="post-desc-wrapper">
               <div className="post-desc">
                   <div className="post-title">
-                      <h2 className="entry-title larger"><a href="#">{profileData.ProfileFullname}</a></h2>
-                      <h2 className="entry-title larger tkFontSecondaryName" style={{marginBottom:0+"px"}}><a href="">{profileData.ProfileURL}</a></h2>
+                      <h2 className="entry-title larger"><a>{profileData.ProfileFullname}</a></h2>
+                      <h2 className="entry-title larger tkFontSecondaryName" style={{marginBottom:0+"px"}}><a>{profileData.ProfileURL}</a></h2>
                   </div>
               </div>
           </div>
@@ -182,12 +203,12 @@ export class CelebGrid extends React.Component {
   renderIndustry(industriesData){
     return (
       <li key={industriesData.IndustryID} className={industriesData.IndustryName}>
-          <a data-rel={".category-" + industriesData.IndustryName} >{industriesData.IndustryName}</a>
+          <a data-rel={".industries-" + industriesData.IndustryName} onClick={()=> this.handleIndustryFilter(industriesData.IndustryID)} >{industriesData.IndustryName}</a>
       </li>
     )
   }
 
-//buttons
+//for filtering buttons tabs
 toggleCategories(){
   this.setState({showCategoriesTag:!this.state.showCategoriesTag});
 }
@@ -205,6 +226,7 @@ toggleIndustries(){
 }
 
   render (){
+    console.log(this.state.profiles, 'render');
     return (
             !this.state.isLoading ?
             <div className="section mcb-section tkSection-paddingBottom-only bg-color-1">
@@ -303,9 +325,6 @@ toggleIndustries(){
                                               <li className="reset current-cat">
                                                   <a className="all" data-rel="*" href="#">Show all</a>
                                               </li>
-                                              <li className="hot-news">
-                                                  <a data-rel=".category-hot-news" href="#">Hot news</a>
-                                              </li>
 
                                               {this.state.industries.map(industries=>this.renderIndustry(industries))}
 
@@ -329,7 +348,7 @@ toggleIndustries(){
                                       <div className="column one pager_wrapper pager_lm" style={{paddingTop: 7+"%"}}>
                                           <a className="pager_load_more button button_js" style={{borderRadius: 30+"px",borderWidth:1+"px"}}>
 
-                                            <span onClick={this.handleLoadMore} className="button_label" style={{padding:11+"px "+40+"px"}}>Load more</span></a>
+                                            <span onClick={() => this.handleLoadMore()} className="button_label" style={{padding:11+"px "+40+"px"}}>Load more</span></a>
                                       </div>
                                   </div>
                               </div>
