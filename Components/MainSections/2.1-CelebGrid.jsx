@@ -8,7 +8,8 @@ export class CelebGrid extends React.Component {
     this.state = {
 
       isLoading: true,
-      bgColor:"red"
+      bgColor:"red",
+      showLoadMoreBtn:true
     };
 
     this.handleLoadMore = this.handleLoadMore.bind(this);
@@ -104,8 +105,7 @@ export class CelebGrid extends React.Component {
 
     bodyData.PageNumber += 1 ;
     // bodyData.PageNumber += 1;
-    console.log(bodyData);
-
+    console.log(bodyData,"body data");
 
     fetch(url, {
       method: 'POST',
@@ -124,16 +124,28 @@ export class CelebGrid extends React.Component {
       console.log(this.state.profiles, '1');
       console.log(data.Result, '2');
       console.log(newResult, '3');
+      console.log(newResult.length, 'array length');
 
+      // var arrayLength=0;
+      // arrayLength += newResult.length+15 ;
+      // console.log(arrayLength,'this my array counter');
+
+      var arrayModulus = newResult.length % bodyData.PageNumber;
+      console.log(newResult.length/100, 'length divide by 100');
+      console.log(arrayModulus, 'modulus');
+
+      // var arrayCheck = arrayCompare > 1 ? false : true
+      var arrayCheck = newResult.length/100 < arrayModulus ? false : true
+      // newResult.length == showLoadMoreBtn1 > 45 ? "false" : "true";
 
       this.setState({
                       profiles:newResult,
                       isLoading:false,
-                      filteringData: bodyData
+                      filteringData: bodyData,
+                      showLoadMoreBtn:arrayCheck
                     });
 
      console.log(this.state.profiles, '4');
-
 
     });
   }
@@ -346,9 +358,12 @@ toggleIndustries(){
                                       </div>
                                       {/*One full width row*/}
                                       <div className="column one pager_wrapper pager_lm" style={{paddingTop: 7+"%"}}>
-                                          <a className="pager_load_more button button_js" style={{borderRadius: 30+"px",borderWidth:1+"px"}}>
-
-                                            <span onClick={() => this.handleLoadMore()} className="button_label" style={{padding:11+"px "+40+"px"}}>Load more</span></a>
+                                            {
+                                              this.state.showLoadMoreBtn ?
+                                              <a className="pager_load_more button button_js" style={{borderRadius: 30+"px",borderWidth:1+"px"}}>
+                                              <span onClick={() => this.handleLoadMore()} className="button_label" style={{padding:11+"px "+40+"px"}}>Load more</span></a>
+                                                : null
+                                            }
                                       </div>
                                   </div>
                               </div>
