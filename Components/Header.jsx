@@ -22,7 +22,7 @@ export class Header extends React.Component {
                                   <nav id="menu" className="menu-main-menu-container">
                                       <ul id="menu-main-menu" className="menu tk">
                                           <li className="current_page_item">
-                                              <a href="index-GorgiasFull.html"><span>New Gorgias</span></a>
+                                              <a href="index-Gorgias.html"><span>New Gorgias</span></a>
                                           </li>
                                           <li>
                                               <a href="Gorgias-Stories.html"><span>Stories</span></a>
