@@ -1,5 +1,14 @@
 import React from 'react';
+import {
+  BrowserRouter as Router,
+  StaticRouter, // for server rendering
+  Route,
+  Link
+  // etc.
+} from 'react-router-dom'
 
+import {LoginContent} from './LoginContent.jsx'
+import {MasterContent} from './MasterContent.jsx'
 
 export class Header extends React.Component {
   render (){
@@ -22,10 +31,10 @@ export class Header extends React.Component {
                                   <nav id="menu" className="menu-main-menu-container">
                                       <ul id="menu-main-menu" className="menu tk">
                                           <li className="current_page_item">
-                                              <a href="index-Gorgias.html"><span>New Gorgias</span></a>
+                                              <Link to={"/"}><span>New Gorgias</span></Link>
                                           </li>
                                           <li>
-                                              <a href="Gorgias-Stories.html"><span>Stories</span></a>
+                                            <Link to={"/login"}><span>Login</span></Link>
                                           </li>
                                           <li>
                                               <a href="Gorgias-IconicStore.html"><span>Iconic Store</span></a>
@@ -34,7 +43,7 @@ export class Header extends React.Component {
                                               <a target="_blank" href="Gorgias-Contact.html"><span>Download</span></a>
                                           </li>
                                           <li>
-                                              <a href="Gorgias-About.html"><span>About</span></a>
+                                            <Link to={"/about"}><span>About</span></Link>
                                           </li>
                                       </ul>
                                   </nav><a className="responsive-menu-toggle" href="#"><i className="icon-menu-fine"></i></a>
@@ -56,8 +65,8 @@ export class Header extends React.Component {
 
 
           </header>
-        </div>
 
+        </div>
     );
   }
 }
