@@ -51,8 +51,8 @@ jQuery('.helper .link.toggle').click(function(e) {
 jQuery(window).bind("debouncedresize", function() {
 	iframesHeight();
 	// Isotope | Relayout
-	jQuery('.masonry.isotope').isotope();
-	jQuery('.masonry.gallery').isotope('layout');
+	// jQuery('.masonry.isotope').isotope();
+	// jQuery('.masonry.gallery').isotope('layout');
 	// Zoom Box | Vertical Align
 	zoomBoxVerticalAlign();
 });
@@ -1336,7 +1336,7 @@ jQuery(document).ready(function() {
 	 * --------------------------------------------------------------------------- */
 	jQuery(window).bind("debouncedresize", function() {
 		iframesHeight();
-		jQuery('.masonry.isotope,.isotope').isotope();
+		// jQuery('.masonry.isotope,.isotope').isotope();
 		// carouFredSel wrapper Height set
 		mfn_carouFredSel_height();
 		// Sidebar Height

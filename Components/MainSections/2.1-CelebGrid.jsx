@@ -131,6 +131,7 @@ export class CelebGrid extends React.Component {
       // console.log(arrayLength,'this my array counter');
 
       var arrayModulus = newResult.length % bodyData.PageNumber;
+
       console.log(newResult.length/100, 'length divide by 100');
       console.log(arrayModulus, 'modulus');
 
@@ -182,12 +183,13 @@ export class CelebGrid extends React.Component {
   renderProfile(profileData){
     return (
       <div key={profileData.ProfileID} className="post-item isotope-item clearfix post-2277 post  format-standard has-post-thumbnail  category-lifestyle category-technology tag-Malaysia author-Female">
-          <div className="post-photo-wrapper scale-with-grid"><img width="800" height="800" src={profileData.ProfileImage} className="scale-with-grid wp-post-image" alt="home_journalist_blog7" />
+          <div className="post-photo-wrapper scale-with-grid">
+            <img width="800" height="800" src={profileData.ProfileImage} className="scale-with-grid wp-post-image" alt="home_journalist_blog7" />
           </div>
           <div className="post-desc-wrapper">
               <div className="post-desc">
                   <div className="post-title">
-                      <h2 className="entry-title larger"><a>{profileData.ProfileFullname}</a></h2>
+                      <h2 className="entry-title larger" style={{paddingBottom:0}}><a>{profileData.ProfileFullname}</a></h2>
                       <h2 className="entry-title larger tkFontSecondaryName" style={{marginBottom:0+"px"}}><a>{profileData.ProfileURL}</a></h2>
                   </div>
               </div>
