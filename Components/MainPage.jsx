@@ -1,11 +1,13 @@
 import React from 'react';
 import {LoginContent} from './LoginContent.jsx'
-import {MasterContent} from './MasterContent.jsx'
+import {HomeContainer} from './HomeContainer.jsx'
+import {AboutContainer} from './AboutContainer.jsx'
 import {
   BrowserRouter as Router,
   StaticRouter, // for server rendering
   Route,
   Link,
+  browserHistory
   // etc.
 } from 'react-router-dom'
 
@@ -18,12 +20,12 @@ export class MainPage extends React.Component {
    render() {
       return(
 
-        <Router>
+        <Router history={browserHistory}>
 
         <div>
-              <Route exact path="/" component={MasterContent}/>
+              <Route exact path="/" component={HomeContainer}/>
               <Route exact path="/login" component={LoginContent}/>
-              
+              <Route exact path="/about" component={AboutContainer}/>
         </div>
       </Router>
 

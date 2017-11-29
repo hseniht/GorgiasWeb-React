@@ -151,6 +151,13 @@ color: white;
   /*background-color: rgba(0,0,0,0.5);*/
 }
 
+
+#menu-main-menu.menu li a.activee{ /*need to retry*/
+  border-bottom:4px solid #ff0088;
+  font-weight: bolder;
+color: red!important;
+}
+
 #Top_bar .menu.tk>li:after{
   transition: all 0.1s linear 0s;
     width: 100%;
@@ -484,7 +491,7 @@ img.tk.fit3 {
 
 /*Nexus 5x, 6p & iPhone 6plus*/
 @media screen and (min-width:401px) , screen and (max-width: 760px) {
-  img.scale-with-grid, #Content img {
+  img.scale-with-grid.fixed-grid, {
   	min-height: 164px;
   	max-height: 164px;
   	object-fit: cover;
@@ -493,7 +500,7 @@ img.tk.fit3 {
 
 /*ipad iphone 4 & 5*/
 @media only screen and (max-width:400px){
-   img.scale-with-grid, #Content img {
+   img.scale-with-grid.fixed-grid,  {
   	min-height: 146px;
   	max-height: 146px;
   	object-fit: cover;
@@ -501,7 +508,7 @@ img.tk.fit3 {
 }
 
 @media only screen and (max-width:320px){
-   img.scale-with-grid, #Content img {
+   img.scale-with-grid.fixed-grid,{
   	min-height: 126px;
   	max-height: 126px;
   	object-fit: cover;
@@ -510,7 +517,7 @@ img.tk.fit3 {
 
 /*ipad */
 @media only screen and (width: 768px){
-    img.scale-with-grid, #Content img {
+    img.scale-with-grid.fixed-grid, {
      min-height: 137px;
      max-height: 137px;
      object-fit: cover;
@@ -519,7 +526,7 @@ img.tk.fit3 {
 
 /*ipad pro & laptops*/
 @media only screen and (min-width:768px){
-  img.scale-with-grid, #Content img {
+  img.scale-with-grid.fixed-grid, {
    min-height: 180px;
    max-height: 180px;
    object-fit: cover;
@@ -528,7 +535,7 @@ img.tk.fit3 {
 
 /*desktop*/
 @media only screen and (min-width:1025px){
-  img.scale-with-grid, #Content img {
+  img.scale-with-grid.fixed-grid, {
    min-height: 215px;
    max-height: 215px;
    object-fit: cover;
@@ -537,7 +544,7 @@ img.tk.fit3 {
 
 /*to render ipad again*/
 @media only screen and (width: 768px){
-    img.scale-with-grid, #Content img {
+    img.scale-with-grid.fixed-grid, {
      min-height: 137px;
      max-height: 137px;
      object-fit: cover;

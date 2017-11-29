@@ -184,7 +184,7 @@ export class CelebGrid extends React.Component {
     return (
       <div key={profileData.ProfileID} className="post-item isotope-item clearfix post-2277 post  format-standard has-post-thumbnail  category-lifestyle category-technology tag-Malaysia author-Female">
           <div className="post-photo-wrapper scale-with-grid">
-            <img width="800" height="800" src={profileData.ProfileImage} className="scale-with-grid wp-post-image" alt="home_journalist_blog7" />
+            <img width="800" height="800" src={profileData.ProfileImage} className="scale-with-grid wp-post-image fixed-grid" alt="home_journalist_blog7" />
           </div>
           <div className="post-desc-wrapper">
               <div className="post-desc">

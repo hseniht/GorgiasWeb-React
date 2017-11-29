@@ -3,12 +3,13 @@ import {
   BrowserRouter as Router,
   StaticRouter, // for server rendering
   Route,
-  Link
+  Link,
+  NavLink
   // etc.
 } from 'react-router-dom'
 
 import {LoginContent} from './LoginContent.jsx'
-import {MasterContent} from './MasterContent.jsx'
+import {HomeContainer} from './HomeContainer.jsx'
 
 export class Header extends React.Component {
   render (){
@@ -30,8 +31,8 @@ export class Header extends React.Component {
                               <div className="menu_wrapper">
                                   <nav id="menu" className="menu-main-menu-container">
                                       <ul id="menu-main-menu" className="menu tk">
-                                          <li className="current_page_item">
-                                              <Link to={"/"}><span>New Gorgias</span></Link>
+                                          <li >
+                                              <NavLink exact to={"/"} activeStyle={{color:"red"}}><span>New Gorgias</span></NavLink>
                                           </li>
                                           <li>
                                             <Link to={"/login"}><span>Login</span></Link>
@@ -43,7 +44,7 @@ export class Header extends React.Component {
                                               <a target="_blank" href="Gorgias-Contact.html"><span>Download</span></a>
                                           </li>
                                           <li>
-                                            <Link to={"/about"}><span>About</span></Link>
+                                            <NavLink to={"/about"} activeClassName={"activee"}><span>About</span></NavLink>
                                           </li>
                                       </ul>
                                   </nav><a className="responsive-menu-toggle" href="#"><i className="icon-menu-fine"></i></a>
