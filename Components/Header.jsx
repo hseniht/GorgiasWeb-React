@@ -38,10 +38,10 @@ export class Header extends React.Component {
                                             <Link to={"/login"}><span>Login</span></Link>
                                           </li>
                                           <li>
-                                              <a href="Gorgias-IconicStore.html"><span>Iconic Store</span></a>
+                                            <NavLink to={"/contact"} activeClassName={"activee"}><span>Contact</span></NavLink>
                                           </li>
                                           <li>
-                                              <a target="_blank" href="Gorgias-Contact.html"><span>Download</span></a>
+                                            <NavLink to={"/terms"} activeClassName={"activee"}><span>Terms</span></NavLink>
                                           </li>
                                           <li>
                                             <NavLink to={"/about"} activeClassName={"activee"}><span>About</span></NavLink>

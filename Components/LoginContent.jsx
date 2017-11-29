@@ -1,6 +1,14 @@
 import React from 'react';
 import {LoginForm1} from './LoginSections/LoginForm1.jsx';
 import {AppProfile} from './AppProfileSections/AppProfile.jsx';
+import {
+  BrowserRouter as Router,
+  StaticRouter, // for server rendering
+  Route,
+  Link,
+  NavLink
+  // etc.
+} from 'react-router-dom'
 
 
 export class LoginContent extends React.Component {
@@ -10,10 +18,10 @@ export class LoginContent extends React.Component {
             <div>
               <div className="goBack">
                 <i className="icon-left-thin"></i>
-                <a href="index-GorgiasFull.html">go back to Gorgias</a>
+                <NavLink exact to={"/"} activeStyle={{color:"red"}}><span>Back to Gorgias</span></NavLink>
               </div>
 
-              <AppProfile/>
+              <LoginForm1/>
 
               <footer id="Footer" className="clearfix" style={{backgroundColor:"rgba(0,0,0,0.5)", position:"fixed"}}>
                 <div className="footer_copy">

@@ -31,8 +31,12 @@ export class Content extends React.Component {
                 <div className="sections_group">
                   <div className="entry-content">
 
+                    <WhatIsGorgias/>
                     <TopStories/>
+                    <WhoIsGorgias/>
                     <CelebGrid/>
+                    <WhyBecomeGorgias/>
+                    <AppDownload/>
 
                   </div>
                 </div>

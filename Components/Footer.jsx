@@ -1,5 +1,13 @@
 import React from 'react';
 import $ from 'jquery'
+import {
+  BrowserRouter as Router,
+  StaticRouter, // for server rendering
+  Route,
+  Link,
+  NavLink
+  // etc.
+} from 'react-router-dom'
 
 export class Footer extends React.Component {
 
@@ -18,9 +26,17 @@ export class Footer extends React.Component {
                   <div className="column one-fourth">
                     <aside className="widget tkLinks">
                       <h4 className="tkFont1" style={{fontWeight:'bold'}}><a href="Gorgias-About.html">Site</a></h4>
-                      <p className="tkFont1" style={{fontWeight:'bold'}}><a href="#">sitemap1fjs</a></p>
-                      <p className="tkFont1" style={{fontWeight:'bold'}}><a href="#">sitemap2 blabla</a></p>
-                      <p className="tkFont1" style={{fontWeight:'bold'}}><a href="#">sitemap3 blah</a></p>
+                      <p className="tkFont1" style={{fontWeight:'bold'}}>
+                        <NavLink to={"/contact"} activeClassName={"activee"}><span>Contact</span></NavLink>
+                      </p>
+
+                      <p className="tkFont1" style={{fontWeight:'bold'}}>
+                        <NavLink to={"/terms"} activeClassName={"activee"}><span>Terms</span></NavLink>
+                      </p>
+
+                      <p className="tkFont1" style={{fontWeight:'bold'}}>
+                        <NavLink to={"/about"} activeClassName={"activee"}><span>Abouts</span></NavLink>
+                      </p>
                     </aside>
                   </div>
 
