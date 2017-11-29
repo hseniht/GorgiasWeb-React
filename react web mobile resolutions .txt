@@ -5,19 +5,24 @@ iphone 4 - 126 by 126px
 
 iphone 5 - 126 by 126px
 
-
+=====================
 
 samsung s5 - 146px by 146px
 
+
+iphone 6 - 164px by 164px 
+
+
+=====================
 
 nexus 5x - 164px by 164px
 
 nexus 6p - 164px by 164px
 
-iphone 6 - 164px by 164px 
 
 iphone 6plus - 164px by 164px 
 
+=====================
 
 ipad - 137px by 137px 
 

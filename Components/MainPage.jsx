@@ -7,7 +7,6 @@ import {
   StaticRouter, // for server rendering
   Route,
   Link,
-  browserHistory
   // etc.
 } from 'react-router-dom'
 
@@ -17,15 +16,18 @@ export class MainPage extends React.Component {
     this.setState({isLogin:false});
   }
 
+
+
    render() {
       return(
 
-        <Router history={browserHistory}>
+        <Router>
 
         <div>
               <Route exact path="/" component={HomeContainer}/>
               <Route exact path="/login" component={LoginContent}/>
               <Route exact path="/about" component={AboutContainer}/>
+
         </div>
       </Router>
 

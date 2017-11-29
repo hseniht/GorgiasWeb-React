@@ -1,7 +1,15 @@
 import React from 'react';
-
+import $ from 'jquery'
 
 export class Footer extends React.Component {
+
+  componentDidMount(){
+    if ($('.footer-fixed #Footer, .footer-sliding #Footer').length) {
+  		var footerH = $('#Footer').height();
+  		$('#Content').css('margin-bottom', footerH + 'px');
+  	}
+  }
+
   render (){
     return (
             <footer id="Footer" className="clearfix bg-color-4">
