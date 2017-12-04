@@ -4,6 +4,12 @@ import {ContentTerms} from './ContentTerms.jsx'
 import {Footer} from './Footer.jsx'
 
 export class TermsContainer extends React.Component {
+
+  componentWillMount(){
+    //To ensure page is begining at top ;)
+    window.scrollTo(0,0);
+  }
+
    render() {
       return (
 

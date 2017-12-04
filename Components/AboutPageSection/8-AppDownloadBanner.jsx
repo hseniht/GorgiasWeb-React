@@ -26,7 +26,7 @@ export class AppDownloadBanner extends React.Component {
                                           <div className="image_frame image_item scale-with-grid aligncenter no_border">
                                               <div className="image_wrapper" style={{padding: 15+"px"}}>
                                                   <a href="#" title="Download on Appstore">
-                                                      <div className="mask" style={{display:"none"}}></div><img className="scale-with-grid" src="https://assets.ifttt.com/images/channels/110725446/icons/on_color_large.png" alt="" width="100" height="85" />
+                                                      <div className="mask" style={{display:"none"}}></div><img className="scale-with-grid" src="tkImages/appstore-icon.png" alt="" width="100" height="85" />
                                                   </a>
                                                   <div className="image_links" style={{display:"none"}}>
                                                       <a href="#" className="link"><i className="icon-link"></i></a> </div>
@@ -37,7 +37,7 @@ export class AppDownloadBanner extends React.Component {
                                           <div className="image_frame image_item scale-with-grid aligncenter no_border">
                                               <div className="image_wrapper" style={{padding:15+"px"}}>
                                                   <a href="#" title="Download on Playstore">
-                                                      <div className="mask" style={{display:"none"}}></div><img className="scale-with-grid" src="https://omgwhen.com/abb1c5490cb9c7af179bdbdb5a03b4c5.png" alt="" width="100" height="85" />
+                                                      <div className="mask" style={{display:"none"}}></div><img className="scale-with-grid" src="tkImages/playstore-icon-white.png" alt="" width="100" height="85" />
                                                   </a>
                                                   <div className="image_links" style={{display:"none"}}>
                                                       <a href="#" className="link"><i className="icon-link"></i></a> </div>

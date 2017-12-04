@@ -32,7 +32,7 @@ export class Header extends React.Component {
                                   <nav id="menu" className="menu-main-menu-container">
                                       <ul id="menu-main-menu" className="menu tk">
                                           <li >
-                                              <NavLink exact to={"/"} activeStyle={{color:"red"}}><span>New Gorgias</span></NavLink>
+                                            <NavLink exact to={"/"}  activeClassName={"activee"} activeStyle={{color:"white"}}><span>New Gorgias</span></NavLink>
                                           </li>
                                           <li>
                                             <Link to={"/login"}><span>Login</span></Link>

@@ -147,16 +147,10 @@ Start of  Content
 #Top_bar .menu.tk>li.current_page_item>a {
   border-bottom:4px solid #ff0088;
   font-weight: bolder;
-color: white;
+  color: white;
   /*background-color: rgba(0,0,0,0.5);*/
 }
 
-
-#menu-main-menu.menu li a.activee{ /*need to retry*/
-  border-bottom:4px solid #ff0088;
-  font-weight: bolder;
-color: red!important;
-}
 
 #Top_bar .menu.tk>li:after{
   transition: all 0.1s linear 0s;
@@ -183,6 +177,46 @@ color: red!important;
 #Top_bar .menu.tk>li.current_page_item.active:after,.menu.tk> li:hover:after {
     height: 0px;
 }
+
+
+
+/*------------For React Nav--------------*/
+
+#menu-main-menu.menu li a.activee{ /*need to retry*/
+  transition: all 0.1s linear 0s;
+  border-bottom:4px solid #ff0088;
+  font-weight: bolder;
+  /*color: red!important;*/
+}
+#menu-main-menu.menu li a.activee:hover{ /*need to retry*/
+  border-bottom:0px solid #ff0088;
+  font-weight: bolder;
+  /*color: blue!important;*/
+}
+
+
+#menu-main-menu .menu li a.activee:hover:after{ /*need to retry*/
+  height:4px;
+}
+#menu-main-menu .menu li a.activee:active:after{ /*need to retry*/
+  height:4px;
+}
+
+/* worst case use this & set line 165 to 0px
+
+#menu-main-menu.menu li a.activee{
+  border-bottom:4px solid #ff0088;
+  font-weight: bolder;
+  color: red!important;
+}
+
+#menu-main-menu .menu li a.activee:hover:after{
+  height:0px;
+}
+#menu-main-menu .menu li a.activee:active:after{
+  height:0px;
+}
+*/
 
 /*======end of tk's menu bar=======*/
 
