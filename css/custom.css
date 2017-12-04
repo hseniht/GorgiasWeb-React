@@ -164,6 +164,7 @@ Start of  Content
 
 #Top_bar .menu.tk>li:hover:after {
   height: 4px;
+  transition: all 0.1s linear 0s;
 }
 
 #Top_bar .menu.tk>li.active:after,.menu.tk> li:hover:after {
@@ -178,7 +179,10 @@ Start of  Content
     height: 0px;
 }
 
-
+.logo a:hover {
+  text-decoration: none;
+  
+}
 
 /*------------For React Nav--------------*/
 

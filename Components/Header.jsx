@@ -23,10 +23,11 @@ export class Header extends React.Component {
                       <div className="column one">
                           <div className="top_bar_left clearfix">
                               <div className="logo">
-                                  <a id="logo" href="index-musician.html" title="BeMusician - BeTheme">
 
-                                    <h3 style={{color:"white",marginTop: 10+"px"}}>Gorgias</h3>
-                                  </a>
+                                    <NavLink exact to={"/"} activeStyle={{textDecoration:"none"}}>
+                                      <h3 style={{color:"white",marginTop: 10+"px"}}>Gorgias</h3>
+                                    </NavLink>
+
                               </div>
                               <div className="menu_wrapper">
                                   <nav id="menu" className="menu-main-menu-container">

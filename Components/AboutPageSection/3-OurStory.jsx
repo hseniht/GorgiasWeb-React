@@ -4,7 +4,7 @@ import React from 'react';
 export class OurStory extends React.Component {
   render (){
     return (
-        <div className="section" style={{paddingTop:50+"px",paddingBottom:50+"px",background:"whitesmoke"}}>
+        <div className="section" style={{paddingTop:50+"px",paddingBottom:0+"px",background:"whitesmoke"}}>
               <div className="section_wrapper mcb-section-inner">
                   <div className="wrap mcb-wrap one  valign-top clearfix">
                       <div className="mcb-wrap-inner">

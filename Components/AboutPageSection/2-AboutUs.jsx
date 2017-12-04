@@ -14,11 +14,8 @@ export class AboutUs extends React.Component {
 
                                   <h2 className="tkFont1">About Us</h2>
                                   <hr className="no_line" style={{margin:0+" auto "+30+"px"}}/>
-                                  <p style={{color:" #999c9e"}}>
-                                    Our app makes it easy for everyone to get online with stunning, professional and functional web presence. Just complete freedom to express yourself and manage your entire business online..<br />
-                                  </p>
-                                  <p style={{color:"#999c9e"}}>But, not just a better app – a better way of doing things. A new kind of social tech company that works hand in hand with users to do something amazing, something meaningful.</p>
-
+                                  <p style={{color:"#999c9e"}}>GORGIAS® , is a new social media advertising and technology platform in Malaysia that gathers <strong>Celebrities, Professionals, Communities and Brands</strong> from different industries with more than 10,000 fans and followers.
+                                     With this gathering, we will have more than a <strong>million audience</strong> and we can deliver advertiser’s messages to them.</p>
                                 </div>
                               </div>
                           </div>
