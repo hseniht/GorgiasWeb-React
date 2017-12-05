@@ -4,7 +4,7 @@ import React from 'react';
 export class WhatIsGorgias extends React.Component {
   render (){
     return (
-                    <div className="section mcb-section tkSection-paddingTop-only" >
+                    <div id="Stories" className="section mcb-section tkSection-paddingTop-only" >
                           <div className="section_wrapper mcb-section-inner">
                               <div className="wrap mcb-wrap one  valign-top clearfix">
                                   <div className="mcb-wrap-inner">

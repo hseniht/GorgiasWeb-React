@@ -4,7 +4,7 @@ import React from 'react';
 export class WhoIsGorgias extends React.Component {
   render (){
     return (
-            <div className="section mcb-section tkSection-paddingTop-only bg-color-1">
+            <div id="OurGorgias" className="section mcb-section tkSection-paddingTop-only bg-color-1">
                 <div className="section_wrapper mcb-section-inner">
                     <div className="wrap mcb-wrap one  valign-top clearfix">
                         <div className="mcb-wrap-inner">

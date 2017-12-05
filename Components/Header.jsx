@@ -33,17 +33,20 @@ export class Header extends React.Component {
                                   <nav id="menu" className="menu-main-menu-container">
                                       <ul id="menu-main-menu" className="menu tk">
                                           <li >
-                                            <NavLink exact to={"/"}  activeClassName={"activee"} activeStyle={{color:"white"}}><span>New Gorgias</span></NavLink>
+                                            <a href="#Featured"><span>Featured</span></a>
                                           </li>
-                                          
+
                                           <li>
-                                            <NavLink to={"/contact"} activeClassName={"activee"} activeStyle={{color:"white"}}><span>Contact</span></NavLink>
-                                          </li>
-                                          <li>
-                                            <NavLink to={"/terms"} activeClassName={"activee"} activeStyle={{color:"white"}}><span>Terms</span></NavLink>
+                                            <a href="#Stories"><span>Stories</span></a>
                                           </li>
                                           <li>
-                                            <NavLink to={"/about"} activeClassName={"activee"} activeStyle={{color:"white"}}><span>About</span></NavLink>
+                                            <a href="#OurGorgias"><span>OurGorgias</span></a>
+                                          </li>
+                                          <li>
+                                            <a href="#Discover"><span>Discover</span></a>
+                                          </li>
+                                          <li>
+                                            <a href="#download"><span>Download</span></a>
                                           </li>
                                       </ul>
                                   </nav><a className="responsive-menu-toggle" href="#"><i className="icon-menu-fine"></i></a>
