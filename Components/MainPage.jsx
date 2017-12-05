@@ -4,6 +4,7 @@ import {HomeContainer} from './HomeContainer.jsx'
 import {AboutContainer} from './AboutContainer.jsx'
 import {TermsContainer} from './TermsContainer.jsx'
 import {ContactContainer} from './ContactContainer.jsx'
+import {DownloadAppContainer} from './DownloadAppContainer.jsx'
 import {
   BrowserRouter as Router,
   StaticRouter, // for server rendering
@@ -29,6 +30,7 @@ export class MainPage extends React.Component {
                 <Route exact path="/about" component={AboutContainer}/>
                 <Route exact path="/terms" component={TermsContainer}/>
                 <Route exact path="/contact" component={ContactContainer}/>
+                <Route exact path="/downloadApp" component={DownloadAppContainer}/>
            </div>
        </Router>
 

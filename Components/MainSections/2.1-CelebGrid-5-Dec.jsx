@@ -9,8 +9,7 @@ export class CelebGrid extends React.Component {
 
       isLoading: true,
       bgColor:"red",
-      showLoadMoreBtn:true,
-      color_black:true
+      showLoadMoreBtn:true
     };
 
     this.handleLoadMore = this.handleLoadMore.bind(this);
@@ -203,7 +202,7 @@ export class CelebGrid extends React.Component {
 
   renderCountry(countryData){
     return (
-      <li key={countryData.CountryID} className={countryData.CountryName}>
+      <li key={countryData.CountryID} className={countryData.CountryName} style={{backgroundColor:this.state.bgColor}}>
           <a data-rel={".tag-" + countryData.CountryName} onClick={() => this.handleCountryFilter(countryData.CountryID)} >{countryData.CountryName}</a>
       </li>
     )
@@ -231,19 +230,10 @@ toggleCategories(){
 }
 
 toggleCountries(){
-
-  let showCountriesTag=true
-  let activate = true
-  let bgColorActive = activate ? "purple" : "white"
-
   this.setState({
                     showCountriesTag:!this.state.showCountriesTag,
-                    activate:!this.state.activate,
-                    bgColor:bgColorActive,
-                    color_black:!this.state.color
+                    bgColor:"black"
                 });
-  console.log("The current color is",bgColorActive );
-  console.log("The tag state is",showCountriesTag );
 }
 
 toggleProfileTypes(){

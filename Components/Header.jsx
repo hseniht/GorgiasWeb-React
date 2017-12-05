@@ -35,17 +35,15 @@ export class Header extends React.Component {
                                           <li >
                                             <NavLink exact to={"/"}  activeClassName={"activee"} activeStyle={{color:"white"}}><span>New Gorgias</span></NavLink>
                                           </li>
+                                          
                                           <li>
-                                            <Link to={"/login"}><span>Login</span></Link>
+                                            <NavLink to={"/contact"} activeClassName={"activee"} activeStyle={{color:"white"}}><span>Contact</span></NavLink>
                                           </li>
                                           <li>
-                                            <NavLink to={"/contact"} activeClassName={"activee"}><span>Contact</span></NavLink>
+                                            <NavLink to={"/terms"} activeClassName={"activee"} activeStyle={{color:"white"}}><span>Terms</span></NavLink>
                                           </li>
                                           <li>
-                                            <NavLink to={"/terms"} activeClassName={"activee"}><span>Terms</span></NavLink>
-                                          </li>
-                                          <li>
-                                            <NavLink to={"/about"} activeClassName={"activee"}><span>About</span></NavLink>
+                                            <NavLink to={"/about"} activeClassName={"activee"} activeStyle={{color:"white"}}><span>About</span></NavLink>
                                           </li>
                                       </ul>
                                   </nav><a className="responsive-menu-toggle" href="#"><i className="icon-menu-fine"></i></a>

@@ -206,7 +206,7 @@ export class CelebGrid extends React.Component {
 
                                           <ul className="categories">
                                               <li className="reset current-cat">
-                                                  <a className="all" data-rel="*" href="#">Show all</a>
+                                                  <a className="all" data-rel="*" >Show all</a>
                                               </li>
                                               <li className="hot-news">
                                                   <a data-rel=".category-hot-news" href="#">Hot news</a>
@@ -242,9 +242,9 @@ export class CelebGrid extends React.Component {
 
                                           <ul className="authors">
                                               <li className="reset current-cat">
-                                                  <a className="all" data-rel="*" href="#">Show all</a>
+                                                  <a className="all" data-rel="*" >Show all</a>
                                               </li>
-                                            
+
                                               {this.state.profileTypes != null ? this.state.profileTypes.map(profileType => this.renderProfileType(profileType)) : null}
 
                                               <li className="close">

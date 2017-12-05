@@ -35,7 +35,7 @@ export class Footer extends React.Component {
                       </p>
 
                       <p className="tkFont1" style={{fontWeight:'bold'}}>
-                        <NavLink to={"/about"} activeClassName={"activee"}><span>Abouts</span></NavLink>
+                        <NavLink to={"/login"} activeClassName={"activee"}><span>Login</span></NavLink>
                       </p>
                     </aside>
                   </div>
@@ -43,9 +43,13 @@ export class Footer extends React.Component {
                   <div className="column one-fourth">
                     <aside className="widget tkLinks">
                       <h4 className="tkFont1" style={{fontWeight:'bold'}}><a target="_blank" href="Gorgias-About.html#download">About</a></h4>
-                      <p className="tkFont1" style={{fontWeight:'bold'}}><a href="#">Company</a></p>
+                      <p className="tkFont1" style={{fontWeight:'bold'}}>
+                        <NavLink to={"/about"} activeClassName={"activee"}><span>Company</span></NavLink>
+                      </p>
                       <p className="tkFont1" style={{fontWeight:'bold'}}><a href="#">Gorgias Wow</a></p>
-                      <p className="tkFont1" style={{fontWeight:'bold'}}><a target="blank" href="Gorgias-PrivacyPolicy.html">Privacy Policy</a></p>
+                      <p className="tkFont1" style={{fontWeight:'bold'}}>
+                        <NavLink to={"/downloadApp"} activeClassName={"activee"}><span>DownloadApp</span></NavLink>
+                      </p>
                     </aside>
                   </div>
 
