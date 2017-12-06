@@ -1,4 +1,5 @@
 import React from 'react';
+import $ from 'jquery'
 import {
   BrowserRouter as Router,
   StaticRouter, // for server rendering
@@ -11,7 +12,27 @@ import {
 import {LoginContent} from './LoginContent.jsx'
 import {HomeContainer} from './HomeContainer.jsx'
 
+
+
 export class Header extends React.Component {
+
+  componentDidMount(){
+    $('a[href*="#"]:not([href="#"])').click(function() {
+      if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'')
+          || location.hostname == this.hostname) {
+
+          var target = $(this.hash);
+          target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+             if (target.length) {
+               $('html,body').animate({
+                   scrollTop: target.offset().top
+              }, 1000);
+              return false;
+          }
+      }
+    });
+  }
+
   render (){
     return (
         <div id="Header_wrapper" className="bg-parallax" data-enllax-ratio="0.3">

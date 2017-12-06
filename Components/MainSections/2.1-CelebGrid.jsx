@@ -10,7 +10,7 @@ export class CelebGrid extends React.Component {
       isLoading: true,
       bgColor:"red",
       showLoadMoreBtn:true,
-      color_black:true
+      color_black:true 
     };
 
     this.handleLoadMore = this.handleLoadMore.bind(this);

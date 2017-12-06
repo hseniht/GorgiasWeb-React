@@ -90,7 +90,7 @@ export class Footer extends React.Component {
               <div className="footer_copy">
                 <div className="container">
                   <div className="column one">
-                    <a id="back_to_top" href="#" className="button button_left button_js"><span className="button_icon"><i className="icon-up-open-big"></i></span></a>
+                    <a id="back_to_top" href="#Header_wrapper" className="button button_left button_js"><span className="button_icon"><i className="icon-up-open-big"></i></span></a>
                     <div className="copyright">
                       &copy; 2017 Gogias &amp; Co. All Rights Reserved. <a target="_blank" rel="nofollow" href="#">Gorgias</a>
                     </div>
