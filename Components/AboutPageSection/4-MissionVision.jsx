@@ -49,7 +49,7 @@ export class MissionVision extends React.Component {
                                           <div className="animate " data-anim-type="fadeInRightLarge">
                                            <div className="tklist content_slider_li_1">
 
-                                            <div class="tkPanels" style={{padding:"0"}}>
+                                            <div className="tkPanels" style={{padding:"0"}}>
                                               <img width="287" height="339" className="tk fit3" src="https://gorgiasasia.blob.core.windows.net/images/profile-2382.jpg?timestamp=403" alt=""/>
                                               <div className="desc" style={{height:"auto"}}>
                                                 <p className="tkFont1" style={{color:"black",fontWeight:"bold",fontSize: "x-large"}}>Chris Wong</p>

@@ -1,4 +1,5 @@
 import React from 'react';
+import {WebSlider} from './MainSections/0-WebSlider.jsx';
 import {WhatIsGorgias} from './MainSections/1-WhatIsGorgias.jsx';
 import {TopStories} from './MainSections/1.2-TopStories.jsx';
 import {WhyBecomeGorgias} from './MainSections/3-WhyBecomeGorgias.jsx';
@@ -31,6 +32,7 @@ export class Content extends React.Component {
                 <div className="sections_group">
                   <div className="entry-content">
 
+                    <WebSlider/>
                     <WhatIsGorgias/>
                     <TopStories/>
                     <WhoIsGorgias/>
